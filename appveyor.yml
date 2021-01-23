@@ -1,7 +1,9 @@
 version: 1.0.{build}
-image: 
+
+build_cloud: Cosh-C1
+image:
   - Ubuntu
-  - Visual Studio 2017
+  - Windows
 
 environment:
   AWS_DEFAULT_REGION: us-east-1
@@ -45,7 +47,7 @@ for:
   - 
     matrix:
       only:
-        - image: Visual Studio 2017
+        - image: Windows
 
     install:
       - "SET PATH=%PYTHON_HOME%;%PATH%"
